@@ -1,12 +1,17 @@
-    <html>
-        <head>
-            <title>Ahí vamos con la programacion</title>
-        </head>
-        <body>
-            <div>
-                <h2>Buenas noches Alvarete</h2>
-            </div>
 
+<html>
+<title>Aprendiendo</title>
+
+
+
+    {% for post in posts %}
+        <div>
             
-        </body>
-    </html>
+            <h1><a href="">{{ post.titulo }}</a></h1>
+            <p>{{ post.texto|linebreaksbr }}</p>
+            <p>Publicado: {{ post.publicado_fecha }}</p>
+
+        </div>
+    {% endfor %}
+</html>
+
